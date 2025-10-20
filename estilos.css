@@ -1,0 +1,108 @@
+/* Estilos específicos para resultados de notas u otro tipo de página */
+
+.resultado {
+    background: rgba(255, 228, 196, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.resultado h2, h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+}
+
+.info-estudiante {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px #000;
+    color: white;
+}
+
+.materia-item, .sub_title {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.materia-item div, .sub_title div {
+    background-color: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    flex: 1;
+}
+
+.materia-item:last-of-type div[colspan="3"] {
+    flex: 1;
+    background-color: rgba(144,238,144,0.3);
+    color: white;
+    text-align: center;
+    border: 2px dashed white;
+}
+
+.volver {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.volver a {
+    text-decoration: none;
+    background-color: greenyellow;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.volver a:hover {
+    background-color: green;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

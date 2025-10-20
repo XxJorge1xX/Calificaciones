@@ -1,0 +1,290 @@
+/* === BASE === */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Playpen Sans Deva", Arial, sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #111;
+    color: white;
+}
+
+/* === VIDEO DE FONDO === */
+video,
+video.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* === CAPA OSCURA === */
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* === TÍTULOS === */
+h1, h2, h3 {
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    
+    text-align: center;
+    margin: 5px;
+    font-size: 1em;
+    color: black;
+    font-weight: normal;
+}
+
+/* === FORMULARIO Y RESULTADO === */
+form, .resultado {
+    background: rgba(255, 228, 196, 0.3); /* Bisque transparente */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    margin: 10px auto 20px;
+    animation: fadeIn 1s ease-in-out;
+    color: black;
+    text-align: center;
+}
+
+/* Alternativo para la tabla dentro del resultado */
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.tabla-resultados th,
+.tabla-resultados td {
+    border: 1px solid white;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+}
+.tabla-resultados th {
+    background-color: rgba(108, 99, 255, 0.8);
+}
+.tabla-resultados td {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* === INFO DEL ESTUDIANTE === */
+.info-estudiante {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* === SUBTÍTULOS y CAMPOS === */
+.sub_title, .materia-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.sub_title div, .materia-item div {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* === FORMULARIO DE ENTRADA === */
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.user_name, .user_cedula {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"], input[type="number"] {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+/* === MATERIAS === */
+.materias {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.materias div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.materias input {
+    width: 100%;
+    padding: 6px;
+}
+
+/* === BOTONES === */
+.volver a {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: greenyellow;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: skyblue;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.volver a:hover {
+    background-color: #5548d9;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+}
+
+input[type="reset"]:hover {
+    background-color: #8b0000;
+}
+
+.btn:hover {
+    background-color: #4838ff;
+}
+
+/* === CONTENEDOR CENTRAL === */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === EFECTOS === */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.formulario {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.formulario.ocultar {
+    transform: rotateY(180deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.user_input1, .ingresar {
+    border-radius: 30px;
+    text-align: center;
+}
+
+.ingresar {
+    background-color: greenyellow;
+    padding: 5px;
+}
+
+.ingresar:focus {
+    background-color: green;
+}
+.mensaje-final.aprobado {
+            background-color:rgb(255, 255, 255);
+            border: 2px solid rgb(0, 255, 60);
+            color:rgb(0, 255, 60);
+            padding: 10px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .mensaje-final.reprobado {
+            background-color:rgb(255, 255, 255);
+            border: 2px solid rgb(255, 0, 25);
+            color:rgb(255, 0, 25);
+            padding: 1px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 1px black;
+        }
+        
+.sub_title .asignatura,
+.sub_title div:not(.asignatura) {
+    background-color: #d8f3fc; /* Rosa claro */
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #1100ff;
+    margin: 2px;
+    text-align: center;
+}
